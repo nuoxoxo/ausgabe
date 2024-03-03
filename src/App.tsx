@@ -2,6 +2,7 @@
 import './App.scss'
 import {
   createBrowserRouter,
+  Outlet,
   RouterProvider,
 } from "react-router-dom"
 import Dashboard, { dashboardLoader } from './pages/Dashboard';
@@ -41,6 +42,7 @@ function App() {
         hello, world!
         <RouterProvider router={router} />
       </div>
+      <Outlet />
     </>
   )
 }
