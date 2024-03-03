@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import './App.scss'
 import {
+  BrowserRouter,
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
@@ -39,7 +40,9 @@ function App() {
     <>
       <div className='App'>
         hello, world!
-        <RouterProvider router={router} />
+        <BrowserRouter basename='/ausgabe'>
+          <RouterProvider router={router} />
+        </BrowserRouter>
       </div>
     </>
   )
