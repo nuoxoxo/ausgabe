@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   Outlet,
   RouterProvider,
+  // createHashRouter,
 } from "react-router-dom"
 import Dashboard, { dashboardLoader } from './pages/Dashboard';
 import Error from './pages/Error';
@@ -17,7 +18,7 @@ function App() {
   for (let i = 0; i < 1001; i++) {
     routes.push({path: '/ausgabe/' + i, element: <h1>{i}</h1>})
   }
-  const router = createBrowserRouter([
+  const router = /*createHashRouter*/createBrowserRouter([
     ... routes,
     // To fix : 404 on undefined routes
     {
