@@ -17,23 +17,23 @@ function App() {
   // https://reactrouter.com/en/main/start/tutorial
   const routes: { path: string; element: JSX.Element }[] = []
   for (let i = 0; i < 1001; i++) {
-    routes.push({path: '/' + i, element: <h1>{i}</h1>})
+    routes.push({path: '/ausgabe/' + i, element: <h1>{i}</h1>})
   }
   const router = createHashRouter([
     ... routes,
     // To fix : 404 on undefined routes
     {
-      path: "/",
+      path: "/ausgabe/",
       element: <Dashboard />,
       loader: dashboardLoader,
       errorElement: <Error />,
     },
     {
-      path: "/about",
+      path: "/ausgabe/about",
       element: <h1>About</h1>,
     },
     {
-      path: "*",
+      path: "/ausgabe*",
       element: <Error />,
     },
   ]);
