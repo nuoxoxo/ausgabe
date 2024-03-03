@@ -3,7 +3,8 @@ import './App.scss'
 import {
   // BrowserRouter,
   //  👆 GitHub pages doesn't support the tech used by the BrowserRouter
-  createBrowserRouter,
+  // createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom"
 import Dashboard, { dashboardLoader } from './pages/Dashboard';
@@ -18,7 +19,7 @@ function App() {
   for (let i = 0; i < 1001; i++) {
     routes.push({path: '/' + i, element: <h1>{i}</h1>})
   }
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     ... routes,
     // To fix : 404 on undefined routes
     {
