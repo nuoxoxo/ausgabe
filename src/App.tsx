@@ -1,7 +1,8 @@
 // import { useState } from 'react'
 import './App.scss'
 import {
-  BrowserRouter,
+  // BrowserRouter,
+  //  👆 GitHub pages doesn't support the tech used by the BrowserRouter
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
@@ -40,9 +41,7 @@ function App() {
     <>
       <div className='App'>
         hello, world!
-        <BrowserRouter basename='/ausgabe'>
-          <RouterProvider router={router} />
-        </BrowserRouter>
+        <RouterProvider router={router} />
       </div>
     </>
   )
