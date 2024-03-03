@@ -33,7 +33,7 @@ function App() {
       element: <h1>About</h1>,
     },
     {
-      path: "/ausgabe*",
+      path: "/ausgabe/*",
       element: <Error />,
     },
   ]);
