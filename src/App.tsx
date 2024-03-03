@@ -1,10 +1,7 @@
 // import { useState } from 'react'
 import './App.scss'
 import {
-  // BrowserRouter,
-  //  👆 GitHub pages doesn't support the tech used by the BrowserRouter
-  // createBrowserRouter,
-  createHashRouter,
+  createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
 import Dashboard, { dashboardLoader } from './pages/Dashboard';
@@ -19,7 +16,7 @@ function App() {
   for (let i = 0; i < 1001; i++) {
     routes.push({path: '/' + i, element: <h1>{i}</h1>})
   }
-  const router = createHashRouter([
+  const router = createBrowserRouter([
     ... routes,
     // To fix : 404 on undefined routes
     {
@@ -32,10 +29,10 @@ function App() {
       path: "/about",
       element: <h1>About</h1>,
     },
-    // {
-    //   path: "/*",
-    //   element: <Error />,
-    // },
+    {
+      path: "*",
+      element: <Error />,
+    },
   ]);
 
   return (
